@@ -33,6 +33,17 @@ h2 {
 	line-height: 52px;
 }
 
+.container {
+	overflow: hidden;
+	border: 1px solid red;	
+}
+
+@media screen and (max-width: 540px) {
+	.container {
+		padding: 0 16px;
+	}
+}
+
 .btn.btn-crimson {
 	padding: 12px 16px;
 	border-radius: 16px;
@@ -52,6 +63,21 @@ h2 {
 	.btn.btn-crimson {
 		width: calc(100% - 48px);
 	}
+}
+
+.slick-slider {
+	min-width: 0;
+}
+
+.slick-track {
+	display: flex;
+	align-items: flex-start;
+}
+
+.slick-list {
+
+	overflow: hidden;
+
 }
 
 .navbar {
@@ -207,6 +233,10 @@ h2 {
 	width: 24px;
 }
 
+.main-slider .slick-dotted.slick-slider {
+	margin-bottom: 0;
+}
+
 
 .main-slider .slick-arrow {
 	position: absolute;
@@ -288,25 +318,62 @@ h2 {
 	overflow: hidden;
 }
 
+/* @media screen and (max-width: 960px) {
+	.blue-section {
+		padding: 16px 0;
+	}
+} */
+
+
 .success-stories {
 	padding-top: 87px;
 	padding-bottom: 87px;
 }
 
+@media screen and (max-width: 576px) {
+	.success-stories {
+		padding: 16px 0;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.success-stories .container{
+		padding: 0;
+	}
+}
+
 .success-stories__container {
-	grid-template-columns: 40% 60%;
+	grid-template-columns: 42% 58%;
 	grid-template-rows: 204px auto;
-	row-gap: 32px;
-	column-gap: 24px;
 }
 
 .success-stories__header {
 	grid-column: 1;
 	grid-row: 1;
+	padding-bottom: 32px;
+}
+
+@media screen and (max-width: 576px) {
+	.success-stories__header {
+		padding: 0 16px;
+	}
 }
 
 .success-stories__header h2 {
 	color: #32334C;	
+}
+
+@media screen and (max-width: 576px) {
+	.success-stories__header h2 {
+		padding-bottom: 16px;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.success-stories__header h2 {
+		font-size: 32px;
+		line-height: 42px;
+	}
 }
 
 .success-stories__header h5 {
@@ -316,23 +383,45 @@ h2 {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	padding-bottom: 24px;
 }
+
 
 .success-stories__img {
 	grid-column: 2;
 	grid-row: 1 / 3;
 	border: 1px solid blue;
+	padding-left: 24px;
 }
 
-.success-stories__img img {
-	display: block;
+@media screen and (max-width: 576px) {
+	.success-stories__img {
+		padding-bottom: 24px;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.success-stories__img {
+		padding-left: 0;
+	}
+}
+
+
+.success-stories__img img {	
 	width: 100%;
-	height: auto;
+	height: 100%;
+	object-fit: contain;
 }
 
 .success-stories__info {
 	grid-column: 1;
 	grid-row: 2;
+}
+
+@media screen and (max-width: 576px) {
+	.success-stories__info {
+		padding: 0 16px;
+	}
 }
 
 .success-stories__info p {
@@ -342,11 +431,10 @@ h2 {
 	line-height: 22px;
 }
 
-
-
-.container {
-	border: 1px solid red;
-	padding: 0;
+@media screen and (max-width: 960px) {
+	.success-stories__info .btn.btn-crimson {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 960px) {
@@ -370,6 +458,13 @@ h2 {
 .education{
 	margin-bottom: 220px;
 }
+
+@media screen and (max-width: 1200px) {
+	.education {
+			margin-bottom: 80px;
+		}
+}
+
 .education h2 {
 	background: linear-gradient(259deg, #2D1178 25.04%, #DB2D8F 77.78%);
 	background-clip: text;
@@ -379,22 +474,42 @@ h2 {
 	margin-bottom: 40px;
 }
 
-.education__slider .slick-track {	
-	
+@media screen and (max-width: 960px) {
+	.education h2 {	
+		text-align: left;
+		margin-bottom: 8px;
+		font-size: 24px;
+		line-height: 32px;
+	}
 }
 
 .education__slider {
-	margin: 0 -24px;
+	margin: 0 -12px;
+}
+
+@media screen and (max-width: 960px) {
+	.education__slider {
+		margin: 0 -8px;
+	}
 }
 
 .education__slider-item {
-	height: 270px;
-	margin: 24px;
+	height: 260px;
+	margin: 24px 12px;
 	padding: 32px;
 	border-radius: 24px;
 	background: #FFF;
 	box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.12);
 	position: relative;
+}
+
+
+@media screen and (max-width: 960px) {
+	.education__slider-item {
+		height: 270px;
+		margin: 12px 8px;
+		padding: 24px;
+	}	
 }
 
 .education__slider-item h4 {
@@ -509,6 +624,14 @@ h2 {
 	background-color: #C6D9DD;
 	padding-top: 43px;
 	padding-bottom: 63px;
+}
+
+@media screen and (max-width: 768px) {
+	.footer-menu {
+			
+			padding-top: 25px;
+			padding-bottom: 89px;
+		}
 }
 
 .footer-menu__left-bar {

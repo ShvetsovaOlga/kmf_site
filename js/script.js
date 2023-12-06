@@ -24,28 +24,21 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     infinity: true,
-
-    autoplaySpeed: 1500,
-    arrows: false,
     dots: false,
-    pauseOnHover: true,
     responsive: [
-      {
-        breakpoint: 1320,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
       {
         breakpoint: 1140,
         settings: {
           slidesToShow: 2,
+          centerMode: true,
+          centerPadding: "50px",
         },
       },
       {
         breakpoint: 760,
         settings: {
           slidesToShow: 1,
+          centerMode: true,
           centerPadding: "50px",
         },
       },
@@ -66,18 +59,23 @@ $(document).ready(function () {
         breakpoint: 1320,
         settings: {
           slidesToShow: 3,
+          centerMode: true,
+          centerPadding: "50px",
         },
       },
       {
         breakpoint: 1140,
         settings: {
           slidesToShow: 2,
+          centerMode: true,
+          centerPadding: "50px",
         },
       },
       {
         breakpoint: 540,
         settings: {
           slidesToShow: 1,
+          centerMode: true,
           centerPadding: "50px",
         },
       },
