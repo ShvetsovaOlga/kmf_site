@@ -172,6 +172,42 @@ h2 {
 
 .main-slider {
 	margin-top: 100px;
+	position: relative;
+}
+
+.main-slider__dots {
+	position: absolute;
+	left: calc( (397px * 100%) / 1920px);
+	bottom: 32px;
+	text-align: center;
+	display: flex; 
+	justify-content: center; 
+	list-style: none; 
+}
+
+.main-slider__dots button {
+	background-image: url("../img/icons/elements.svg");
+	border: none; 
+	border-radius: 100%; 
+	height: 15px; 
+	width: 15px; 
+	margin: 5px; 
+	outline: none; 
+}
+
+.main-slider__dots .slick-dots li[class="slick-active"] button {
+	background: green;
+}
+
+
+.main-slider .slick-arrow {
+	position: absolute;
+	top: 50%; 
+	margin: -15px 0 0 0; 
+	z-index: 2; 
+	font-size: 0; 
+	width: 30px; 
+	height: 30px; 
 }
 
 .main-slider__item-container {
