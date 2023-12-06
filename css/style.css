@@ -168,6 +168,10 @@ h2 {
 	height: 52px;
 }
 
+.navbar-nav {
+	align-items: center;
+}
+
 /* Main slider */
 
 .main-slider {
