@@ -177,7 +177,7 @@ h2 {
 
 .main-slider__dots {
 	position: absolute;
-	left: calc( (397px * 100%) / 1920px);
+	left: calc( (397 * 100%) / 1920);
 	bottom: 32px;
 	text-align: center;
 	display: flex; 
@@ -186,17 +186,21 @@ h2 {
 }
 
 .main-slider__dots button {
-	background-image: url("../img/icons/elements.svg");
+	background: transparent;
+	background-image: url("../img/icons/dot.svg");
 	border: none; 
 	border-radius: 100%; 
-	height: 15px; 
-	width: 15px; 
+	height: 4px; 
+	width: 4px; 
 	margin: 5px; 
 	outline: none; 
+	font-size: 0;
 }
 
-.main-slider__dots .slick-dots li[class="slick-active"] button {
-	background: green;
+.main-slider__dots li[class="slick-active"] button {
+	background-image: url("../img/icons/dot_active.svg");
+	height: 24px;
+	width: 24px;
 }
 
 
