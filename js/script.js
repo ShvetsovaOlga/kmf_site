@@ -12,12 +12,30 @@ $(document).ready(function () {
   $(".business__slider").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    infinity: true,
-
-    autoplaySpeed: 1500,
-    arrows: false,
-    dots: false,
-    pauseOnHover: true,
+    // infinity: true,
+    // autoplaySpeed: 1500,
+    // arrows: false,
+    // pauseOnHover: true,
+    dots: true,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1140,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+          centerPadding: "50px",
+        },
+      },
+      {
+        breakpoint: 540,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "50px",
+        },
+      },
+    ],
   });
 
   $(".education__slider").slick({
@@ -49,7 +67,7 @@ $(document).ready(function () {
     slidesToShow: 4,
     slidesToScroll: 1,
     infinity: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 1500,
     arrows: false,
     dots: false,
